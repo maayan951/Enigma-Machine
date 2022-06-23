@@ -2,6 +2,7 @@
 from threading import Thread
 from PyQt5 import QtCore, QtGui, QtWidgets
 from enigma_machine import *
+from CONSTANT import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -33,32 +34,10 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.comboBox_wiringSetting1.setFont(font)
         self.comboBox_wiringSetting1.setObjectName("comboBox_wiringSetting1")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
-        self.comboBox_wiringSetting1.addItem("")
+        
+        for i in range(len(ALPHABET)):
+            self.comboBox_wiringSetting1.addItem("")
+        
         self.Layout_wiringSetting.addWidget(self.comboBox_wiringSetting1)
         self.comboBox_wiringSetting2 = QtWidgets.QComboBox(self.formLayoutWidget)
         self.comboBox_wiringSetting2.setEnabled(True)
@@ -68,32 +47,10 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.comboBox_wiringSetting2.setFont(font)
         self.comboBox_wiringSetting2.setObjectName("comboBox_wiringSetting2")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
-        self.comboBox_wiringSetting2.addItem("")
+        
+        for i in range(len(ALPHABET)):
+            self.comboBox_wiringSetting2.addItem("")
+        
         self.Layout_wiringSetting.addWidget(self.comboBox_wiringSetting2)
         self.comboBox_wiringSetting3 = QtWidgets.QComboBox(self.formLayoutWidget)
         self.comboBox_wiringSetting3.setEnabled(True)
@@ -103,32 +60,10 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.comboBox_wiringSetting3.setFont(font)
         self.comboBox_wiringSetting3.setObjectName("comboBox_wiringSetting3")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
-        self.comboBox_wiringSetting3.addItem("")
+        
+        for i in range(len(ALPHABET)):
+            self.comboBox_wiringSetting3.addItem("")
+        
         self.Layout_wiringSetting.addWidget(self.comboBox_wiringSetting3)
         self.formLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
         self.formLayoutWidget_2.setEnabled(True)
@@ -145,11 +80,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_rotor1.setFont(font)
         self.comboBox_rotor1.setObjectName("comboBox_rotor1")
-        self.comboBox_rotor1.addItem("")
-        self.comboBox_rotor1.addItem("")
-        self.comboBox_rotor1.addItem("")
-        self.comboBox_rotor1.addItem("")
-        self.comboBox_rotor1.addItem("")
+        
+        for i in range(len(ROTOR_WIRINGS)):
+            self.comboBox_rotor1.addItem("")
+        
         self.Layout_rotors.addWidget(self.comboBox_rotor1)
         self.comboBox_rotor2 = QtWidgets.QComboBox(self.formLayoutWidget_2)
         self.comboBox_rotor2.setEnabled(True)
@@ -159,11 +93,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_rotor2.setFont(font)
         self.comboBox_rotor2.setObjectName("comboBox_rotor2")
-        self.comboBox_rotor2.addItem("")
-        self.comboBox_rotor2.addItem("")
-        self.comboBox_rotor2.addItem("")
-        self.comboBox_rotor2.addItem("")
-        self.comboBox_rotor2.addItem("")
+        
+        for i in range(len(ROTOR_WIRINGS)):
+            self.comboBox_rotor2.addItem("")
+        
         self.Layout_rotors.addWidget(self.comboBox_rotor2)
         self.comboBox_rotor3 = QtWidgets.QComboBox(self.formLayoutWidget_2)
         self.comboBox_rotor3.setEnabled(True)
@@ -173,11 +106,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_rotor3.setFont(font)
         self.comboBox_rotor3.setObjectName("comboBox_rotor3")
-        self.comboBox_rotor3.addItem("")
-        self.comboBox_rotor3.addItem("")
-        self.comboBox_rotor3.addItem("")
-        self.comboBox_rotor3.addItem("")
-        self.comboBox_rotor3.addItem("")
+        
+        for i in range(len(ROTOR_WIRINGS)):
+            self.comboBox_rotor3.addItem("")
+        
         self.Layout_rotors.addWidget(self.comboBox_rotor3)
         self.formLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
         self.formLayoutWidget_3.setEnabled(True)
@@ -194,13 +126,10 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.comboBox_reflector.setFont(font)
         self.comboBox_reflector.setObjectName("comboBox_reflector")
-        self.comboBox_reflector.addItem("")
-        self.comboBox_reflector.addItem("")
-        self.comboBox_reflector.addItem("")
-        self.comboBox_reflector.addItem("")
-        self.comboBox_reflector.addItem("")
-        self.comboBox_reflector.addItem("")
-        self.comboBox_reflector.addItem("")
+        
+        for i in range(len(REFLECTOR_WIRINGS)):
+            self.comboBox_reflector.addItem("")
+        
         self.Layout_rotors_2.addWidget(self.comboBox_reflector)
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(10, 270, 271, 191))
@@ -214,17 +143,6 @@ class Ui_MainWindow(object):
         font.setPointSize(18)
         self.textEdit_2.setFont(font)
         self.textEdit_2.setObjectName("textEdit_2")
-        
-        # Button
-        # self.button_encryptDecrypt = QtWidgets.QPushButton(self.centralwidget)
-        # self.button_encryptDecrypt.setGeometry(QtCore.QRect(250, 480, 100, 30))
-        # font = QtGui.QFont()
-        # font.setPointSize(16)
-        # font.setBold(True)
-        # font.setWeight(75)
-        # self.button_encryptDecrypt.setFont(font)
-        # self.button_encryptDecrypt.setObjectName("button_encryptDecrypt")
-        # self.button_encryptDecrypt.clicked.connect(self.clickHandler)
         
         self.label_rotors = QtWidgets.QLabel(self.centralwidget)
         self.label_rotors.setGeometry(QtCore.QRect(120, 60, 141, 20))
@@ -288,15 +206,15 @@ class Ui_MainWindow(object):
         
         
         # region event handlers
-        self.textEdit.textChanged.connect(self.clickHandler)                        # event handler for text change in textEdit
-        self.comboBox_reflector.currentIndexChanged.connect(self.clickHandler)      # event handler for comboBox change in reflector
-        self.comboBox_rotor1.currentIndexChanged.connect(self.clickHandler)         # event handler for comboBox change in rotor1
-        self.comboBox_rotor2.currentIndexChanged.connect(self.clickHandler)         # event handler for comboBox change in rotor1
-        self.comboBox_rotor3.currentIndexChanged.connect(self.clickHandler)         # event handler for comboBox change in rotor1
-        self.comboBox_wiringSetting1.currentIndexChanged.connect(self.clickHandler) # event handler for comboBox change in wiringSetting1
-        self.comboBox_wiringSetting2.currentIndexChanged.connect(self.clickHandler) # event handler for comboBox change in wiringSetting1
-        self.comboBox_wiringSetting3.currentIndexChanged.connect(self.clickHandler) # event handler for comboBox change in wiringSetting1
-        self.lineEdit_plugboard.textChanged.connect(self.clickHandler)              # event handler for text change in plugboard
+        self.textEdit.textChanged.connect(self.eventHandler)                        # event handler for text change in textEdit
+        self.comboBox_reflector.currentIndexChanged.connect(self.eventHandler)      # event handler for comboBox change in reflector
+        self.comboBox_rotor1.currentIndexChanged.connect(self.eventHandler)         # event handler for comboBox change in rotor1
+        self.comboBox_rotor2.currentIndexChanged.connect(self.eventHandler)         # event handler for comboBox change in rotor1
+        self.comboBox_rotor3.currentIndexChanged.connect(self.eventHandler)         # event handler for comboBox change in rotor1
+        self.comboBox_wiringSetting1.currentIndexChanged.connect(self.eventHandler) # event handler for comboBox change in wiringSetting1
+        self.comboBox_wiringSetting2.currentIndexChanged.connect(self.eventHandler) # event handler for comboBox change in wiringSetting1
+        self.comboBox_wiringSetting3.currentIndexChanged.connect(self.eventHandler) # event handler for comboBox change in wiringSetting1
+        self.lineEdit_plugboard.textChanged.connect(self.eventHandler)              # event handler for text change in plugboard
         # endregion event handlers
                 
         self.retranslateUi(MainWindow)
@@ -306,111 +224,33 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Enigma Machine V.1(MBB)"))
-        self.comboBox_wiringSetting1.setItemText(0, _translate("MainWindow", "A"))
-        self.comboBox_wiringSetting1.setItemText(1, _translate("MainWindow", "B"))
-        self.comboBox_wiringSetting1.setItemText(2, _translate("MainWindow", "C"))
-        self.comboBox_wiringSetting1.setItemText(3, _translate("MainWindow", "D"))
-        self.comboBox_wiringSetting1.setItemText(4, _translate("MainWindow", "E"))
-        self.comboBox_wiringSetting1.setItemText(5, _translate("MainWindow", "F"))
-        self.comboBox_wiringSetting1.setItemText(6, _translate("MainWindow", "G"))
-        self.comboBox_wiringSetting1.setItemText(7, _translate("MainWindow", "H"))
-        self.comboBox_wiringSetting1.setItemText(8, _translate("MainWindow", "I"))
-        self.comboBox_wiringSetting1.setItemText(9, _translate("MainWindow", "J"))
-        self.comboBox_wiringSetting1.setItemText(10, _translate("MainWindow", "K"))
-        self.comboBox_wiringSetting1.setItemText(11, _translate("MainWindow", "L"))
-        self.comboBox_wiringSetting1.setItemText(12, _translate("MainWindow", "M"))
-        self.comboBox_wiringSetting1.setItemText(13, _translate("MainWindow", "N"))
-        self.comboBox_wiringSetting1.setItemText(14, _translate("MainWindow", "O"))
-        self.comboBox_wiringSetting1.setItemText(15, _translate("MainWindow", "P"))
-        self.comboBox_wiringSetting1.setItemText(16, _translate("MainWindow", "Q"))
-        self.comboBox_wiringSetting1.setItemText(17, _translate("MainWindow", "R"))
-        self.comboBox_wiringSetting1.setItemText(18, _translate("MainWindow", "S"))
-        self.comboBox_wiringSetting1.setItemText(19, _translate("MainWindow", "T"))
-        self.comboBox_wiringSetting1.setItemText(20, _translate("MainWindow", "U"))
-        self.comboBox_wiringSetting1.setItemText(21, _translate("MainWindow", "V"))
-        self.comboBox_wiringSetting1.setItemText(22, _translate("MainWindow", "W"))
-        self.comboBox_wiringSetting1.setItemText(23, _translate("MainWindow", "X"))
-        self.comboBox_wiringSetting1.setItemText(24, _translate("MainWindow", "Y"))
-        self.comboBox_wiringSetting1.setItemText(25, _translate("MainWindow", "Z"))
-        self.comboBox_wiringSetting2.setItemText(0, _translate("MainWindow", "A"))
-        self.comboBox_wiringSetting2.setItemText(1, _translate("MainWindow", "B"))
-        self.comboBox_wiringSetting2.setItemText(2, _translate("MainWindow", "C"))
-        self.comboBox_wiringSetting2.setItemText(3, _translate("MainWindow", "D"))
-        self.comboBox_wiringSetting2.setItemText(4, _translate("MainWindow", "E"))
-        self.comboBox_wiringSetting2.setItemText(5, _translate("MainWindow", "F"))
-        self.comboBox_wiringSetting2.setItemText(6, _translate("MainWindow", "G"))
-        self.comboBox_wiringSetting2.setItemText(7, _translate("MainWindow", "H"))
-        self.comboBox_wiringSetting2.setItemText(8, _translate("MainWindow", "I"))
-        self.comboBox_wiringSetting2.setItemText(9, _translate("MainWindow", "J"))
-        self.comboBox_wiringSetting2.setItemText(10, _translate("MainWindow", "K"))
-        self.comboBox_wiringSetting2.setItemText(11, _translate("MainWindow", "L"))
-        self.comboBox_wiringSetting2.setItemText(12, _translate("MainWindow", "M"))
-        self.comboBox_wiringSetting2.setItemText(13, _translate("MainWindow", "N"))
-        self.comboBox_wiringSetting2.setItemText(14, _translate("MainWindow", "O"))
-        self.comboBox_wiringSetting2.setItemText(15, _translate("MainWindow", "P"))
-        self.comboBox_wiringSetting2.setItemText(16, _translate("MainWindow", "Q"))
-        self.comboBox_wiringSetting2.setItemText(17, _translate("MainWindow", "R"))
-        self.comboBox_wiringSetting2.setItemText(18, _translate("MainWindow", "S"))
-        self.comboBox_wiringSetting2.setItemText(19, _translate("MainWindow", "T"))
-        self.comboBox_wiringSetting2.setItemText(20, _translate("MainWindow", "U"))
-        self.comboBox_wiringSetting2.setItemText(21, _translate("MainWindow", "V"))
-        self.comboBox_wiringSetting2.setItemText(22, _translate("MainWindow", "W"))
-        self.comboBox_wiringSetting2.setItemText(23, _translate("MainWindow", "X"))
-        self.comboBox_wiringSetting2.setItemText(24, _translate("MainWindow", "Y"))
-        self.comboBox_wiringSetting2.setItemText(25, _translate("MainWindow", "Z"))
-        self.comboBox_wiringSetting3.setItemText(0, _translate("MainWindow", "A"))
-        self.comboBox_wiringSetting3.setItemText(1, _translate("MainWindow", "B"))
-        self.comboBox_wiringSetting3.setItemText(2, _translate("MainWindow", "C"))
-        self.comboBox_wiringSetting3.setItemText(3, _translate("MainWindow", "D"))
-        self.comboBox_wiringSetting3.setItemText(4, _translate("MainWindow", "E"))
-        self.comboBox_wiringSetting3.setItemText(5, _translate("MainWindow", "F"))
-        self.comboBox_wiringSetting3.setItemText(6, _translate("MainWindow", "G"))
-        self.comboBox_wiringSetting3.setItemText(7, _translate("MainWindow", "H"))
-        self.comboBox_wiringSetting3.setItemText(8, _translate("MainWindow", "I"))
-        self.comboBox_wiringSetting3.setItemText(9, _translate("MainWindow", "J"))
-        self.comboBox_wiringSetting3.setItemText(10, _translate("MainWindow", "K"))
-        self.comboBox_wiringSetting3.setItemText(11, _translate("MainWindow", "L"))
-        self.comboBox_wiringSetting3.setItemText(12, _translate("MainWindow", "M"))
-        self.comboBox_wiringSetting3.setItemText(13, _translate("MainWindow", "N"))
-        self.comboBox_wiringSetting3.setItemText(14, _translate("MainWindow", "O"))
-        self.comboBox_wiringSetting3.setItemText(15, _translate("MainWindow", "P"))
-        self.comboBox_wiringSetting3.setItemText(16, _translate("MainWindow", "Q"))
-        self.comboBox_wiringSetting3.setItemText(17, _translate("MainWindow", "R"))
-        self.comboBox_wiringSetting3.setItemText(18, _translate("MainWindow", "S"))
-        self.comboBox_wiringSetting3.setItemText(19, _translate("MainWindow", "T"))
-        self.comboBox_wiringSetting3.setItemText(20, _translate("MainWindow", "U"))
-        self.comboBox_wiringSetting3.setItemText(21, _translate("MainWindow", "V"))
-        self.comboBox_wiringSetting3.setItemText(22, _translate("MainWindow", "W"))
-        self.comboBox_wiringSetting3.setItemText(23, _translate("MainWindow", "X"))
-        self.comboBox_wiringSetting3.setItemText(24, _translate("MainWindow", "Y"))
-        self.comboBox_wiringSetting3.setItemText(25, _translate("MainWindow", "Z"))
-        self.comboBox_rotor1.setItemText(0, _translate("MainWindow", "I"))
-        self.comboBox_rotor1.setItemText(1, _translate("MainWindow", "II"))
-        self.comboBox_rotor1.setItemText(2, _translate("MainWindow", "III"))
-        self.comboBox_rotor1.setItemText(3, _translate("MainWindow", "IV"))
-        self.comboBox_rotor1.setItemText(4, _translate("MainWindow", "V"))
-        self.comboBox_rotor2.setItemText(0, _translate("MainWindow", "I"))
-        self.comboBox_rotor2.setItemText(1, _translate("MainWindow", "II"))
-        self.comboBox_rotor2.setItemText(2, _translate("MainWindow", "III"))
-        self.comboBox_rotor2.setItemText(3, _translate("MainWindow", "IV"))
-        self.comboBox_rotor2.setItemText(4, _translate("MainWindow", "V"))
-        self.comboBox_rotor3.setItemText(0, _translate("MainWindow", "I"))
-        self.comboBox_rotor3.setItemText(1, _translate("MainWindow", "II"))
-        self.comboBox_rotor3.setItemText(2, _translate("MainWindow", "III"))
-        self.comboBox_rotor3.setItemText(3, _translate("MainWindow", "IV"))
-        self.comboBox_rotor3.setItemText(4, _translate("MainWindow", "V"))
-        self.comboBox_reflector.setItemText(0, _translate("MainWindow", "A"))
-        self.comboBox_reflector.setItemText(1, _translate("MainWindow", "B"))
-        self.comboBox_reflector.setItemText(2, _translate("MainWindow", "C"))
-        self.comboBox_reflector.setItemText(3, _translate("MainWindow", "D"))
-        self.comboBox_reflector.setItemText(4, _translate("MainWindow", "E"))
-        self.comboBox_reflector.setItemText(5, _translate("MainWindow", "Beta"))
-        self.comboBox_reflector.setItemText(6, _translate("MainWindow", "Gamma"))
+        
+        for i in range(len(ALPHABET)):
+            self.comboBox_wiringSetting1.setItemText(i,_translate("MainWindow", ALPHABET[i]))
+        
+        for i in range(len(ALPHABET)):
+            self.comboBox_wiringSetting2.setItemText(i,_translate("MainWindow", ALPHABET[i]))
+        
+        for i in range(len(ALPHABET)):
+            self.comboBox_wiringSetting3.setItemText(i,_translate("MainWindow", ALPHABET[i]))
+        
+        for i in range(len(ROTOR_WIRINGS)):
+            self.comboBox_rotor1.setItemText(i,_translate("MainWindow", list(ROTOR_WIRINGS.keys())[i]))
+        
+        for i in range(len(ROTOR_WIRINGS)):
+            self.comboBox_rotor2.setItemText(i,_translate("MainWindow", list(ROTOR_WIRINGS.keys())[i]))
+        
+        for i in range(len(ROTOR_WIRINGS)):
+            self.comboBox_rotor3.setItemText(i,_translate("MainWindow", list(ROTOR_WIRINGS.keys())[i]))
+        
+        for i in range(len(REFLECTOR_WIRINGS)):
+            self.comboBox_reflector.setItemText(i,_translate("MainWindow", list(REFLECTOR_WIRINGS.keys())[i]))
+        
         self.textEdit.setPlaceholderText(_translate("MainWindow", "Input"))        
         self.textEdit_2.setPlaceholderText(_translate("MainWindow", "Output"))
-        # self.button_encryptDecrypt.setText(_translate("MainWindow", "Go"))
         self.label_rotors.setText(_translate("MainWindow", "Rotors:"))
         self.label_rotorsPositions.setText(_translate("MainWindow", "Rotors Positions:"))
         self.label_reflector.setText(_translate("MainWindow", "Reflector:"))
@@ -420,7 +260,7 @@ class Ui_MainWindow(object):
         self.lineEdit_plugboard.setPlaceholderText(_translate("MainWindow", "BQ CR DI EJ KW"))
 
 
-    def clickHandler(self):
+    def eventHandler(self):
         inputMessage = self.textEdit.toPlainText()
         if inputMessage == "":
             self.textEdit_2.setText("")
